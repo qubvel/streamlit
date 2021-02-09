@@ -199,39 +199,6 @@ function MainMenu(props: Props): ReactElement {
       label: "Clear cache",
       shortcut: "c",
     },
-    recordScreencast: {
-      onClick: props.screencastCallback,
-      label: SCREENCAST_LABEL[props.screenCastState] || "Record a screencast",
-      shortcut: SCREENCAST_LABEL[props.screenCastState] ? "esc" : "",
-      stopRecordingIndicator: Boolean(SCREENCAST_LABEL[props.screenCastState]),
-    },
-    deployApp: {
-      onClick: getDeployAppUrl(props.deployParams),
-      label: "Deploy this app",
-    },
-    saveSnapshot: {
-      disabled: isServerDisconnected,
-      onClick: props.shareCallback,
-      label: "Save a snapshot",
-    },
-    documentation: {
-      onClick: getOpenInWindowCallback(ONLINE_DOCS_URL),
-      label: "Documentation",
-    },
-    community: {
-      onClick: getOpenInWindowCallback(COMMUNITY_URL),
-      label: "Ask a question",
-    },
-    report: {
-      onClick: getOpenInWindowCallback(BUG_URL),
-      label: "Report a bug",
-    },
-    s4t: {
-      onClick: getOpenInWindowCallback(TEAMS_URL),
-      label: "Streamlit for Teams",
-    },
-    settings: { onClick: props.settingsCallback, label: "Settings" },
-    about: { onClick: props.aboutCallback, label: "About" },
   }
 
   const S4AMenuOptions = props.s4aMenuItems.map(item => {
